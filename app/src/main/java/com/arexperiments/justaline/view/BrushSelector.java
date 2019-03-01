@@ -23,6 +23,7 @@ import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
+import android.widget.ImageView;
 
 import com.arexperiments.justaline.AppSettings;
 import com.arexperiments.justaline.R;
@@ -33,6 +34,8 @@ import com.arexperiments.justaline.R;
  */
 
 public class BrushSelector extends ConstraintLayout implements View.OnClickListener {
+
+    private AppSettings.LineColor selectedColor = AppSettings.LineColor.WHITE;
 
     private static final String TAG = "BrushSelector";
 
@@ -49,7 +52,7 @@ public class BrushSelector extends ConstraintLayout implements View.OnClickListe
 
     private View mSmallButton, mMediumButton, mLargeButton;
 
-    private View mSelectedSizeIndicator;
+    private ImageView mSelectedSizeIndicator;
 
     private int mSelectedBrush = defaultBrush.first;
 
@@ -198,16 +201,19 @@ public class BrushSelector extends ConstraintLayout implements View.OnClickListe
 
         switch (lineWidth) {
             case SMALL:
-                getResources().getValue(R.dimen.brush_scale_small, outValue, true);
+                getResources().getValue(R.dimen.brush_scale_medium, outValue, true);
+                mSelectedSizeIndicator.setImageDrawable(getResources().getDrawable(R.drawable.ic_brush_color_option_blue));
                 mSelectedBrush = SMALL_BRUSH;
                 break;
             case MEDIUM:
                 getResources().getValue(R.dimen.brush_scale_medium, outValue, true);
+                mSelectedSizeIndicator.setImageDrawable(getResources().getDrawable(R.drawable.ic_brush_color_option_green));
                 mSelectedBrush = MEDIUM_BRUSH;
                 break;
             default:
             case LARGE:
-                getResources().getValue(R.dimen.brush_scale_large, outValue, true);
+                getResources().getValue(R.dimen.brush_scale_medium, outValue, true);
+                mSelectedSizeIndicator.setImageDrawable(getResources().getDrawable(R.drawable.ic_brush_color_option_white));
                 mSelectedBrush = LARGE_BRUSH;
                 break;
         }
