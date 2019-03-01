@@ -147,6 +147,7 @@ public class DrawARActivity extends BaseActivity
     private AtomicReferenceArray<Vector2f> touchQueue;
 
     private float mLineWidthMax = 0.33f;
+    private Vector3f mLineColor = AppSettings.LineColor.WHITE.getColor();
 
     private float[] mLastFramePosition;
 
@@ -475,7 +476,10 @@ public class DrawARActivity extends BaseActivity
      * addStroke adds a new stroke to the scene
      */
     private void addStroke() {
-        mLineWidthMax = mBrushSelector.getSelectedLineWidth().getWidth();
+        //mLineWidthMax = mBrushSelector.getSelectedLineWidth().getWidth();
+        mLineWidthMax = AppSettings.LineWidth.MEDIUM.getWidth();
+        //zv
+        mLineColor = AppSettings.LineColor.values()[mBrushSelector.getSelectedLineWidth().ordinal()].getColor();
 
         Stroke stroke = new Stroke();
         stroke.localLine = true;
@@ -663,7 +667,9 @@ public class DrawARActivity extends BaseActivity
                 }
             }
             if (mLineShaderRenderer.bNeedsUpdate.get()) {
-                mLineShaderRenderer.setColor(AppSettings.getColor());
+                //mLineShaderRenderer.setColor(AppSettings.getColor());
+                //zv
+                mLineShaderRenderer.setColor(mLineColor);
                 mLineShaderRenderer.mDrawDistance = AppSettings.getStrokeDrawDistance();
                 float distanceScale = 0.0f;
                 mLineShaderRenderer.setDistanceScale(distanceScale);

@@ -34,7 +34,23 @@ import javax.vecmath.Vector3f;
 
 public class AppSettings {
 
-    private static final Vector3f color = new Vector3f(1f, 1f, 1f);
+    private static final Vector3f color = new Vector3f(0.1f, 1f, 1f);
+    public enum LineColor {
+        RED(new Vector3f(1f, 0.1f, 0.1f)),
+        BLUE(new Vector3f(0.1f, 1f, 1f)),
+        GREEN(new Vector3f(0.1f, 1f, 0.1f)),
+        WHITE(new Vector3f(1f, 1f, 1f));
+
+        private final Vector3f color;
+
+        LineColor(Vector3f color) {
+            this.color= color;
+        }
+
+        public Vector3f getColor() {
+            return color;
+        }
+    }
 
     private static final float strokeDrawDistance = 0.13f;
 
