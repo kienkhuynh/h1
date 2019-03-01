@@ -30,9 +30,9 @@
             android:paddingEnd="@dimen/brush_size_indicator_padding_right"
             android:paddingStart="@dimen/brush_size_indicator_padding_left"
             android:paddingTop="@dimen/brush_size_indicator_padding_top"
-            android:scaleX="@dimen/brush_scale_large"
-            android:scaleY="@dimen/brush_scale_large"
-            android:src="@drawable/ic_brush_size_option" />
+            android:scaleX="@dimen/brush_scale_medium"
+            android:scaleY="@dimen/brush_scale_medium"
+            android:src="@drawable/ic_brush_color_option_white" />
     </FrameLayout>
 
     <FrameLayout
@@ -62,7 +62,7 @@
             android:paddingTop="@dimen/brush_size_indicator_padding_top"
             android:scaleX="@dimen/brush_scale_medium"
             android:scaleY="@dimen/brush_scale_medium"
-            android:src="@drawable/ic_brush_size_option" />
+            android:src="@drawable/ic_brush_color_option_green" />
     </FrameLayout>
 
     <FrameLayout
@@ -91,9 +91,9 @@
             android:paddingEnd="@dimen/brush_size_indicator_padding_right"
             android:paddingStart="@dimen/brush_size_indicator_padding_left"
             android:paddingTop="@dimen/brush_size_indicator_padding_top"
-            android:scaleX="@dimen/brush_scale_small"
-            android:scaleY="@dimen/brush_scale_small"
-            android:src="@drawable/ic_brush_size_option" />
+            android:scaleX="@dimen/brush_scale_medium"
+            android:scaleY="@dimen/brush_scale_medium"
+            android:src="@drawable/ic_brush_color_option_blue" />
     </FrameLayout>
 
     <FrameLayout
@@ -125,7 +125,7 @@
             android:paddingTop="@dimen/brush_size_indicator_padding_top"
             android:scaleX="@dimen/brush_scale_small"
             android:scaleY="@dimen/brush_scale_small"
-            android:src="@drawable/ic_brush_size_option" />
+            android:src="@drawable/ic_brush_color_option_white" />
     </FrameLayout>
 
 </merge>

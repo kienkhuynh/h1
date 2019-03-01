@@ -36,7 +36,7 @@ public class AppSettings {
 
     private static final Vector3f color = new Vector3f(0.1f, 1f, 1f);
     public enum LineColor {
-        RED(new Vector3f(1f, 0.1f, 0.1f)),
+        //RED(new Vector3f(1f, 0.1f, 0.1f)),
         BLUE(new Vector3f(0.1f, 1f, 1f)),
         GREEN(new Vector3f(0.1f, 1f, 0.1f)),
         WHITE(new Vector3f(1f, 1f, 1f));
@@ -65,9 +65,9 @@ public class AppSettings {
     private static final int smoothingCount = 1500;
 
     public enum LineWidth {
-        SMALL(0.006f),
+        SMALL(0.011f), //SMALL(0.006f),
         MEDIUM(0.011f),
-        LARGE(0.020f);
+        LARGE(0.011f);//LARGE(0.020f);
 
         private final float width;
 

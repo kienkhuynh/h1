@@ -27,4 +27,8 @@
     <color name="white_50">#80FFFFFF</color>
     <color name="white">#FFFFFF</color>
 
+
+    <color name="green">#11FF11</color>
+    <color name="blue">#11FFFF</color>
+
 </resources>
